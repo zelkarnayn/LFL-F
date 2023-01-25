@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Unbounded:wght@300;400;600&display=swap');
+
+body {
+   margin: 0;
+}
+
+.header_menu {
+    height: 60px;
+    width: 100%;
+    background: #1A1A1D;
+    display: flex;
+}
+
+.logo {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_img {
+    width: 50%;
+    cursor: pointer;
+}
+
+.menu {
+    width: 60%;
+}
+
+.menu_list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_item {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-family: 'Unbounded', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu_item:hover {
+    background-color: #4E4E50;
+}
