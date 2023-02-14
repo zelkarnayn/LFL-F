@@ -8,7 +8,7 @@ const initialState = {
 
 export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
     try {
-        const res = await fetch("http://localhost:4000/news")
+        const res = await fetch("http://mysite.na4u.ru/news")
         const news = await res.json()
         if (news.error) {
             return thunkAPI.rejectWithValue(news.error)
@@ -25,7 +25,7 @@ export const addNews = createAsyncThunk("news/post", async ({ title, photo, desc
     formData.append("img", photo)
 
     try {
-        const res = await fetch("http://localhost:4000/news/add", {
+        const res = await fetch("http://mysite.na4u.ru/news/add", {
             method: 'POST',
             body: formData
         })

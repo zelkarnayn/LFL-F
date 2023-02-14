@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400&family=Play:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Unbounded:wght@300;400;600&display=swap');
+
+body {
+   margin: 0;
+   background-color: #323333;
+   height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #323333;
+}
+
+.main {
+    flex: 1 1 auto;
+}

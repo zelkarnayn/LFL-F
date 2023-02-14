@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNews } from "../../features/news.slice";
+import { addNews } from "../../../features/news.slice";
 import style from "./News.module.css";
 
 const AddNews = () => {
@@ -34,15 +34,13 @@ const AddNews = () => {
     setDescription("");
   };
 
-  console.log(process.env.BACK_URL);
-
   return (
     <>
-      <div className={style.createSheltersMainBox}>
-        <div className={style.createSheltersPosition}>
-          <div className={style.createSheltersFlex}>
-            <div className={style.createSheltersFileUpload}>
-              <div className={style.createSheltersImage}>
+      <div className={style.MainBox}>
+        <div className={style.Position}>
+          <div className={style.Flex}>
+            <div className={style.FileUpload}>
+              <div className={style.Image}>
                 <input
                   type="file"
                   id="upload"
@@ -76,14 +74,14 @@ const AddNews = () => {
               </div>
             </div>
           </div>
-          <div className={style.createSheltersDetails}>
-            <div className={style.createSheltersTitle}>
-              <span>Добавить новость</span>
+          <div className={style.Details}>
+            <div className={style.Title}>
+              <h2>ДОБАВИТЬ НОВОСТЬ</h2>
             </div>
-            <div className={style.createSheltersFuncional}>
+            <div className={style.Funcional}>
               {/* TITLE */}
-              <div className={style.createSheltersFuncionalInfo}>
-                <h6>Заголовок</h6>
+              <div className={style.FuncionalInfo}>
+                <h1>Заголовок</h1>
                 <input
                   value={title}
                   onChange={(e) => handleTitle(e)}
@@ -93,8 +91,8 @@ const AddNews = () => {
               </div>
 
               {/* DISCRIOTION */}
-              <div className={style.createSheltersFuncionalInfo}>
-                <h6>Описание</h6>
+              <div className={style.FuncionalInfo}>
+                <h1>Описание</h1>
                 <textarea
                   value={description}
                   onChange={(e) => handleDescription(e)}
@@ -106,13 +104,13 @@ const AddNews = () => {
                 ></textarea>
               </div>
             </div>
-            <div className={style.buttonPositionCreateShelters}>
+            <div className={style.buttonPosition}>
               <button
                 onClick={saveForm}
                 variant="primary"
                 className={style.buttonForm}
               >
-                Сохранить
+                СОХРАНИТЬ
               </button>
             </div>
           </div>

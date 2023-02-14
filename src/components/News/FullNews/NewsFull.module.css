@@ -1,0 +1,16 @@
+.newsFull {
+    padding: 30px;
+    color: white;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.text {
+    padding: 40px;
+    text-align: left;
+}
+
+.image {
+    width: 100%;
+}
