@@ -10,7 +10,7 @@ export const getFighters = createAsyncThunk(
   "fighters/get",
   async (data, thunkAPI) => {
     try {
-      const res = await fetch("http://mysite.na4u.ru/fighters");
+      const res = await fetch("https://mysite.na4u.ru/fighters");
       const fighters = await res.json;
       if (fighters.error) {
         return thunkAPI.rejectWithValue(fighters.error);
@@ -38,7 +38,7 @@ export const postFighter = createAsyncThunk(
         image,
         weight,
       } = data;
-      const res = await fetch("http://mysite.na4u.ru/fighters", {
+      const res = await fetch("https://mysite.na4u.ru/fighters", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
