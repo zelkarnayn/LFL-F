@@ -8,7 +8,7 @@ const initialState = {
 
 export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
     try {
-        const res = await fetch("https://mysite.na4u.ru/news")
+        const res = await fetch(`${process.env.BACK_URL}/news`)
         const news = await res.json()
         if (news.error) {
             return thunkAPI.rejectWithValue(news.error)
